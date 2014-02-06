@@ -1,6 +1,18 @@
 require 'spec_helper'
 
 describe PagesController do
+
+  describe 'GET #index' do
+    before do
+      visit root_path
+    end
+
+    it "should render the index page" do
+      expect(response).to render_template :index
+    end
+
+  end
+
   describe 'GET #faq' do
     before do
       visit faq_path

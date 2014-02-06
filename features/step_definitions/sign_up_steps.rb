@@ -3,9 +3,11 @@ Given(/^I visit the home page$/) do
 end
 
 Given(/^I fill in the sign up form correctly$/) do
-  pending # express the regexp above with the code you wish you had
+  @user = create(:user)
+  fill_in "username", @user.username
+  fill_in "password", @user.password
 end
 
 Then(/^I should see my profile page$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content(@user.name)
 end
