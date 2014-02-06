@@ -1,11 +1,15 @@
-Given(/^I visit the "(.*?)"$/) do |page|
-  visit page
+Given(/^I visit the FAQ page$/) do
+  visit faq_path
+end
+
+Given(/^I visit the About page$/) do
+  visit about_path
 end
 
 Then(/^I should see the FAQ page$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content "FAQ"
 end
 
-Then(/^I should see the about page$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the About page$/) do
+  expect(page).to have_content "About"
 end
