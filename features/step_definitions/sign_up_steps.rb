@@ -4,7 +4,7 @@ end
 
 Given(/^I fill in the sign up form correctly$/) do
   @user = FactoryGirl.create(:user)
-  fill_in "user_username", with: @user.username
+  fill_in "user_email", with: @user.email
   fill_in "user_password", with: @user.password
   click_button "Create User"
 end

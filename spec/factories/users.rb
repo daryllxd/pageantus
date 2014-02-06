@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :user do
-    username "MyText"
+    email "MyText"
     password "MyText"
   end
 end
