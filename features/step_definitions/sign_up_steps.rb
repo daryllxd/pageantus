@@ -10,5 +10,5 @@ Given(/^I fill in the sign up form correctly$/) do
 end
 
 Then(/^I should see my profile page$/) do
-  expect(page).to have_content(@user.username)
+  expect(page).to have_content(@user.email)
 end
