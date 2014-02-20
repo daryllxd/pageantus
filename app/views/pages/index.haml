@@ -2,6 +2,7 @@
   .row
     .col-md-6
       %h1 Pageantus: Pageant Management System
+      %p.lead= Faker::Lorem.sentence(5)
     .col-md-6
       .well
         %h2 Sign up
@@ -18,5 +19,5 @@
   .row
     - 3.times do
       .col-md-4
-        %h2= Faker::Lorem.words(rand(1..3)).join(" ").titleize
+        %h2= Faker::Lorem.sentence(1).titleize
         %p= Faker::Lorem.paragraph
