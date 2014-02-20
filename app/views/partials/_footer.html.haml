@@ -1,0 +1,13 @@
+%footer.navbar.navbar-inverse.navbar-default{:role => "navigation"}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to "Pageantus", root_path, class: 'navbar-brand'
+    #bs-example-navbar-collapse-2.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "Daryll Santos", "http://github.com/daryllxd"

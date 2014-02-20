@@ -10,6 +10,8 @@
   %body
     %header
       = render 'partials/navigation'
-    %main{:role => "main"}
-      = render 'partials/messages'
-      = yield
+    .page
+      %main{:role => "main"}
+        = render 'partials/messages'
+        = yield
+      = render 'partials/footer'
