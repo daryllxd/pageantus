@@ -1,13 +1,22 @@
 .container
-  %h1 Pageantus: Pageant Management System
-
-  = form_for @user do |f|
-    = f.label :email
-    \:
-    \#{f.text_field :email}
-    %br/
-    = f.label :password
-    \:
-    \#{f.text_field :password}
-    %br/
-    = f.submit
+  .row
+    .col-md-6
+      %h1 Pageantus: Pageant Management System
+    .col-md-6
+      .well
+        %h2 Sign up
+        = form_for @user do |f|
+          = f.label :email
+          \:
+          \#{f.text_field :email}
+          %br/
+          = f.label :password
+          \:
+          \#{f.text_field :password}
+          %br/
+          = f.submit
+  .row
+    - 3.times do
+      .col-md-4
+        %h2= Faker::Lorem.words(2).join(" ")
+        %p= Faker::Lorem.paragraph
