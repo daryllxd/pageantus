@@ -1,23 +1,22 @@
-.container
-  .row
-    .col-md-6
+.row
+  .col-md-6
+    .well
       %h1 Pageantus: Pageant Management System
       %p.lead= Faker::Lorem.sentence(5)
-    .col-md-6
-      .well
-        %h2 Sign up
-        = form_for @user do |f|
+  .col-md-6
+    .well
+      %h2 Sign up
+      = form_for @user do |f|
+        .form-group
           = f.label :email
-          \:
-          \#{f.text_field :email}
-          %br/
+          = f.text_field :email, class: "form-control"
+        .form-group
           = f.label :password
-          \:
-          \#{f.text_field :password}
-          %br/
-          = f.submit
-  .row
-    - 3.times do
-      .col-md-4
-        %h2= Faker::Lorem.sentence(1).titleize
-        %p= Faker::Lorem.paragraph
+          = f.text_field :password, class: "form-control"
+        .form-group
+          = f.submit class: "btn-primary"
+.row
+  - 3.times do
+    .col-md-4
+      %h2= Faker::Lorem.sentence(1).titleize
+      %p= Faker::Lorem.paragraph

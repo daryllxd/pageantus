@@ -13,5 +13,6 @@
     .page
       %main{:role => "main"}
         = render 'partials/messages'
-        = yield
+        .container
+          = yield
       = render 'partials/footer'
