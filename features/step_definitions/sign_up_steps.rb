@@ -1,7 +1,3 @@
-Given(/^I visit the home page$/) do
-  visit root_path
-end
-
 Given(/^I fill in the sign up form correctly$/) do
   @user = create(:user)
   fill_in "user_email", with: @user.email

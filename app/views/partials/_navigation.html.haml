@@ -15,13 +15,5 @@
           = link_to 'About', about_path
         %li
           = link_to 'FAQ', faq_path
-      
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %form.navbar-form.navbar-left{:role => "search"}
-            .form-group
-              %input.form-control{:placeholder => "Email Address", :type => "text"}
-              %input.form-control{:placeholder => "Password", :type => "text"}
-            %button.btn.btn-primary{:type => "submit"} Submit
-        %li
-          = link_to 'Sign Out', destroy_user_session_path, method:"delete"
+
+      = render 'partials/sign_in_and_log_out'
