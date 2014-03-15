@@ -1,9 +1,9 @@
 %ul.nav.navbar-nav.navbar-right
   %li
     %form.navbar-form.navbar-left{:role => "search"}
-      .form-group
+      .sign-in-form.form-group
         %input.form-control{:placeholder => "Email Address", :type => "text"}
         %input.form-control{:placeholder => "Password", :type => "text"}
-      %button.btn.btn-primary{:type => "submit"} Submit
+      %button.btn.btn-primary{:type => "submit"} Log In
   %li
     = link_to 'Sign Out', destroy_user_session_path, method:"delete"
