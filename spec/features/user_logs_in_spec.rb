@@ -7,6 +7,7 @@ feature 'User logs in' do
   end
 
   scenario 'they should see their photo' do
+    pending
     sign_in_as_user
     expect_to_see_image @user.profile_picture_url
   end

@@ -1,16 +1,5 @@
-class PagesController < ApplicationController
-  
-  def index
-   @user = User.new
+class PagesController < HighVoltage::PagesController
+  def show
+    render template: current_page
   end
-
-  def about
-
-  end
-
-  def faq
-
-  end
-
-
 end

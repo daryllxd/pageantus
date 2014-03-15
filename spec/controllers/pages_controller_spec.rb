@@ -1,39 +1,19 @@
 require 'spec_helper'
 
-describe PagesController do
+LANDING_PAGES = %w(about faq)
 
-  describe 'GET #index' do
-    before do
-      visit root_path
+describe HighVoltage::PagesController do
+  LANDING_PAGES.each do |page|
+    context 'GET /#{page}' do
+      before { get :show, id: page }
+
+      it "should be successful" do
+        expect(response).to be_success  
+      end
+
+      it "should render the page" do
+        expect(response).to render_template(page)
+      end      
     end
-
-    it "should render the index page" do
-      expect(response).to render_template :index
-    end
-
   end
-
-  describe 'GET #faq' do
-    before do
-      visit faq_path
-    end
-
-    it "should render the faq page" do
-      expect(response).to render_template :faq
-    end
-
-  end
-
-  describe 'GET #about' do
-    before do
-      visit about_path
-    end
-
-    it "should render the faq page" do
-      expect(response).to render_template :about
-    end
-
-  end
-
-
 end
