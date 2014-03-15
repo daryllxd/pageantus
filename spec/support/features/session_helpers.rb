@@ -7,7 +7,7 @@ module Features
 
   def sign_in_with(email, password)
     visit root_path
-    within(:css, '.sign-in-form') do
+    within(:css, '.header-sign-in-form') do
       fill_in 'Email Address', with: email
       fill_in 'Password', with: password
     end

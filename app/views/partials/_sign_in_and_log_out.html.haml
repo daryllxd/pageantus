@@ -1,9 +1,11 @@
-%ul.nav.navbar-nav.navbar-right
+%ul.nav.navbar-nav.navbar-right.header-sign-in-form
   %li
-    %form.navbar-form.navbar-left{:role => "search"}
-      .sign-in-form.form-group
-        %input.form-control{:placeholder => "Email Address", :type => "text"}
-        %input.form-control{:placeholder => "Password", :type => "text"}
-      %button.btn.btn-primary{:type => "submit"} Log In
-  %li
-    = link_to 'Sign Out', destroy_user_session_path, method:"delete"
+    - if !user_signed_in?
+      = form_for(:user, url: session_path(:user), html: {class: "form-inline", role: "form"}) do |f|
+        .form-group
+          = f.text_field :email, class: "form-control", placeholder: "Email Address"
+        .form-group
+          = f.password_field :password, class: "form-control", placeholder: "Password"
+        = f.submit "Log In", class: "btn btn-primary"
+    - else
+      = button_to 'Sign Out', destroy_user_session_path, method: "delete", class: "btn btn-primary"
