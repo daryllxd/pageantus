@@ -5,6 +5,11 @@ module Features
     sign_in_with(@user.email, @user.password)
   end
 
+  def sign_in_as_user_with_pageants
+    @user = create(:user)
+    sign_in_with(@user.email, @user.password)
+  end
+
   def sign_in_with(email, password)
     visit root_path
     within(:css, '.header-sign-in-form') do
