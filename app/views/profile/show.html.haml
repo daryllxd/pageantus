@@ -5,6 +5,7 @@
   .col-md-3
     %ul
       %li Home
+      %li= link_to 'Create Pageant', new_pageant_path
   .col-md-9
     - if @user.pageants.count > 0
       - @user.pageants.each do |pageant|

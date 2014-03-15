@@ -20,20 +20,20 @@ feature 'User sees pageants' do
       click_link 'No pageants. Add your first!'
       fill_in_create_pageant_form
       
-      expect_to_see 'Pageant Creation Page'
+      expect_to_see @pageant.name
 
     end
   end
 
   def fill_in_create_pageant_form
-    pageant = create(:pageant)
-    fill_in_create_pageant_form_fields(pageant)
+    @pageant = create(:pageant)
+    fill_in_create_pageant_form_fields(@pageant)
     click_button 'Add Pageant'
   end
 
   def fill_in_create_pageant_form_fields(pageant)
     within(:css, '.create-book') do
-      fill_in 'Name', with: pageant.name
+      fill_in 'Name', with: @pageant.name
     end
   end
 

@@ -4,6 +4,6 @@
       = simple_form_for :user, url: session_path(:user), html: { class: "form-inline" } do |f|
         = f.input_field :email, placeholder: 'Email Address'
         = f.input_field :password, placeholder: 'Password'
-        = f.submit
+        = f.submit 'Log In'
     - else
       = button_to 'Sign Out', destroy_user_session_path, method: "delete", class: "btn btn-primary"
