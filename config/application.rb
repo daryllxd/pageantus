@@ -17,5 +17,8 @@ module Pageantus
       g.helper_specs false
     end
 
+    config.i18n.enforce_available_locales = true
+
+
   end
 end
