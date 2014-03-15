@@ -1,5 +1,11 @@
+@import "bourbon";
+@import "neat";
 @import "partials/resets";
 @import "bootstrap";
+
+.header-sign-in-form{
+  @include pad( ($navbar-height/4) default );
+}
 
 input[type="submit"]{
   @extend .btn;
