@@ -9,16 +9,22 @@
   @extend .navbar-default;
 }
 
+.header-logo{
+  @extend .navbar-header;
+  @include pad( $navbar-padding-vertical/2 $navbar-padding-horizontal );
+}
+
 .header-links{
   @extend .nav;
   @extend .navbar-nav;
+  @include pad( $navbar-padding-vertical/2 $navbar-padding-horizontal );
 }
 
 .header-sign-in-form{
   @extend .nav;
   @extend .navbar-nav;
   @extend .navbar-right;
-  @include pad( ($navbar-height/4) default );
+  @include pad( $navbar-padding-vertical $navbar-padding-horizontal );
 }
 
 input[type="submit"]{
