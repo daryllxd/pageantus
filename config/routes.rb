@@ -10,4 +10,5 @@ Pageantus::Application.routes.draw do
 
   resource :profile, controller: 'profile', only: :show
   resources :users
+  resources :pageant, only: :new
 end

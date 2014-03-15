@@ -1,10 +1,18 @@
 %h1 Welcome
 %p= @user.email
 
-- if @user.pageants.count > 0
-  - @user.pageants.each do |pageant|
-    = pageant.name
-- else
-  = link_to 'No pageants. Add your first!', '#'
+.row
+  .col-md-3
+    %ul
+      %li Home
+  .col-md-9
+    - if @user.pageants.count > 0
+      - @user.pageants.each do |pageant|
+        = pageant.name
+    - else
+      = link_to 'No pageants. Add your first!', new_pageant_path
+    
+
+
 
 
