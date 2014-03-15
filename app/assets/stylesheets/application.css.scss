@@ -3,7 +3,21 @@
 @import "partials/resets";
 @import "bootstrap";
 
+.header{
+  @extend .navbar;
+  @extend .navbar-inverse;
+  @extend .navbar-default;
+}
+
+.header-links{
+  @extend .nav;
+  @extend .navbar-nav;
+}
+
 .header-sign-in-form{
+  @extend .nav;
+  @extend .navbar-nav;
+  @extend .navbar-right;
   @include pad( ($navbar-height/4) default );
 }
 

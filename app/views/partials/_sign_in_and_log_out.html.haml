@@ -1,4 +1,4 @@
-%ul.nav.navbar-nav.navbar-right.header-sign-in-form
+%ul.header-sign-in-form
   %li
     - if !user_signed_in?
       = simple_form_for :user, url: session_path(:user), html: { class: "form-inline" } do |f|
