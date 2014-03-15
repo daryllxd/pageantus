@@ -1,6 +1,11 @@
 @import "partials/resets";
 @import "bootstrap";
 
+input[type="submit"]{
+  @extend .btn;
+  @extend .btn-primary;
+}
+
 .create-book{
   @extend .well;
 }

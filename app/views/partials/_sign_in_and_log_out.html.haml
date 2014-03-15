@@ -1,11 +1,9 @@
 %ul.nav.navbar-nav.navbar-right.header-sign-in-form
   %li
     - if !user_signed_in?
-      = form_for(:user, url: session_path(:user), html: {class: "form-inline", role: "form"}) do |f|
-        .form-group
-          = f.text_field :email, class: "form-control", placeholder: "Email Address"
-        .form-group
-          = f.password_field :password, class: "form-control", placeholder: "Password"
-        = f.submit "Log In", class: "btn btn-primary"
+      = simple_form_for :user, url: session_path(:user), html: { class: "form-inline" } do |f|
+        = f.input_field :email, placeholder: 'Email Address'
+        = f.input_field :password, placeholder: 'Password'
+        = f.submit
     - else
       = button_to 'Sign Out', destroy_user_session_path, method: "delete", class: "btn btn-primary"
