@@ -1,2 +1,6 @@
 @import "partials/resets";
 @import "bootstrap";
+
+.create-book{
+  @extend .well;
+}
