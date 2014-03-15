@@ -28,7 +28,7 @@ feature 'User sees pageants' do
   def fill_in_create_pageant_form
     pageant = create(:pageant)
     fill_in_create_pageant_form_fields(pageant)
-    click_link 'Add pageant'
+    click_button 'Add pageant'
   end
 
   def fill_in_create_pageant_form_fields(pageant)
