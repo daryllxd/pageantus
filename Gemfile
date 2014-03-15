@@ -16,23 +16,32 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
+  gem 'annotate'
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'html2haml'
-  gem 'hub', :require=>nil
+  gem 'guard-shell'
+  gem 'hirb'
+  gem 'meta_request'
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'rb-fchange', :require=>false
-  gem 'rb-fsevent', :require=>false
-  gem 'rb-inotify', :require=>false
+  gem 'rb-fchange', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-inotify', require: false
+  gem 'wirb'
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'childprocess'
+  gem 'factory_girl_rails', require: false
+  gem 'guard-spork'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'rails-erd'
   gem 'rspec-rails'
+  gem 'spork-rails'
 end
 
 group :test do
@@ -41,4 +50,6 @@ group :test do
   gem 'email_spec'
   gem 'ffaker'
   gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'simplecov', '~> 0.7.1', require: false
 end
