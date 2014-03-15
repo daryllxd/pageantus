@@ -10,6 +10,10 @@ module Features
     sign_in_with(@user.email, @user.password)
   end
 
+  def sign_in_as_user_without_pageants
+    sign_in_as_user
+  end
+
   def sign_in_with(email, password)
     visit root_path
     within(:css, '.header-sign-in-form') do
