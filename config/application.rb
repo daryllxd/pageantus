@@ -10,6 +10,7 @@ module Pageantus
     config.generators do |g|
       
       g.assets false
+      g.helper false
       g.helper_specs false
       g.test_framework :rspec, fixture: false
       g.view_specs false
