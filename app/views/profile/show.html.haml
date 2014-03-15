@@ -1,2 +1,5 @@
 %h1 Welcome
 %p= @user.email
+- @user.pageants.each do |pageant|
+  = pageant.name
+

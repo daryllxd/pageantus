@@ -6,7 +6,7 @@ module Features
   end
 
   def sign_in_as_user_with_pageants
-    @user = create(:user)
+    @user = create(:user, :with_pageants)
     sign_in_with(@user.email, @user.password)
   end
 
