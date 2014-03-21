@@ -7,6 +7,11 @@ describe Pageant do
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:client) }
   it { should validate_presence_of(:location) }
+
+  it 'should set default values' do
+    pageant = create(:pageant)
+    pageant.status.should == 'inactive'
+  end
 end
 
 # == Schema Information

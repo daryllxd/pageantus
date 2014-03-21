@@ -1,10 +1,19 @@
 class Pageant < ActiveRecord::Base
+  include AASM
+
   belongs_to :user
   has_many :candidates
 
   validates :name, presence: true
   validates :client, presence: true
   validates :location, presence: true
+  validates :status, presence: true
+
+  aasm :column => 'status' do
+    state :inactive, initial: true
+    state :active
+    state :finished
+  end
 
 end
 
