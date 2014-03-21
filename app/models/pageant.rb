@@ -3,6 +3,7 @@ class Pageant < ActiveRecord::Base
   has_many :candidates
 
   validates :name, presence: true
+
 end
 
 # == Schema Information
