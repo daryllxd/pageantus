@@ -35,4 +35,4 @@ feature 'User sees pageant details ' do
     end
   end
 
-e
+end
