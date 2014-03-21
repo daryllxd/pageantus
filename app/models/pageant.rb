@@ -15,4 +15,7 @@ end
 #  user_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  client     :string(255)
+#  location   :string(255)
+#  status     :string(255)
 #

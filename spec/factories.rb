@@ -15,7 +15,10 @@ FactoryGirl.define do
 
   factory :pageant do
     user
+    client "#{Faker::Name.name}"
+    location "#{Faker::Name.name} City"
     name "#{Faker::Company.name} Pageant"
+
 
     trait :with_candidates do
       after(:create) do |instance|
