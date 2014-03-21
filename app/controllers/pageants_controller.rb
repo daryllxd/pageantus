@@ -8,7 +8,8 @@ class PageantsController < ApplicationController
     if pageant.save
       redirect_to profile_path
     else
-
+      # pending
+      redirect_to profile_path
     end
   end
 
@@ -18,7 +19,7 @@ class PageantsController < ApplicationController
   private
 
   def pageant_params
-    params.require(:pageant).permit(:name, :user_id)
+    params.require(:pageant).permit(:name, :client, :location, :user_id)
 
   end
 end

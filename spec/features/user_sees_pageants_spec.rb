@@ -4,7 +4,7 @@ feature 'User sees pageants' do
   context 'user has pageants' do
     scenario 'they should see the pageants' do
       sign_in_as_user_with_pageants
-       expect(page).to have_content(@user.pageants.first.name)
+      expect(page).to have_content(@user.pageants.first.name)
     end
 
   end
@@ -32,8 +32,10 @@ feature 'User sees pageants' do
   end
 
   def fill_in_create_pageant_form_fields(pageant)
-    within(:css, '.create-book') do
+    within(:css, '.create-pageant') do
       fill_in 'Name', with: @pageant.name
+      fill_in 'Client', with: @pageant.client
+      fill_in 'Location', with: @pageant.location
     end
   end
 

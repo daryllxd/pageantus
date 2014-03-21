@@ -5,6 +5,8 @@ describe Pageant do
   it { should have_many(:candidates) }
 
   it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:client) }
+  it { should validate_presence_of(:location) }
 end
 
 # == Schema Information

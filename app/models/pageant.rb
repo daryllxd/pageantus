@@ -3,6 +3,8 @@ class Pageant < ActiveRecord::Base
   has_many :candidates
 
   validates :name, presence: true
+  validates :client, presence: true
+  validates :location, presence: true
 
 end
 

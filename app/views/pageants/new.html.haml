@@ -1,5 +1,7 @@
 %h1 Pageant Creation Page
-.create-book
+.create-pageant
   = simple_form_for :pageant, url: pageants_path, html: { class: 'form-vertical' } do |f|
     = f.input :name
+    = f.input :client
+    = f.input :location
     = f.submit 'Add Pageant'
