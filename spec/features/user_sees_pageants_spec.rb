@@ -23,6 +23,8 @@ feature 'User sees pageants' do
     end
   end
 
+  private
+
   def fill_in_create_pageant_form
     @pageant = create(:pageant)
     fill_in_create_pageant_form_fields(@pageant)

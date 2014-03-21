@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pageants
+  has_one :active_pageant
 
   validates :email, presence: true
   validates :password, presence: true
