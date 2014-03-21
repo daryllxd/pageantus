@@ -1,5 +1,6 @@
 class Pageant < ActiveRecord::Base
   belongs_to :user
+  has_many :candidates
 
   validates :name, presence: true
 end

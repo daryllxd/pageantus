@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Pageant do
   it { should belong_to(:user) }
+  it { should have_many(:candidates) }
 
   it { should validate_presence_of(:name) }
 end

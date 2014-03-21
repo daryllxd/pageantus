@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'User sees pageants' do
+feature 'User sees pageant details ' do
   context 'user has pageants' do
     scenario 'they should see the pageants' do
       sign_in_as_user_with_pageants
@@ -35,4 +35,4 @@ feature 'User sees pageants' do
     end
   end
 
-end
+e
