@@ -7,6 +7,9 @@
       %li Home
       %li= link_to 'Create Pageant', new_pageant_path
   .col-md-9
+    - if @user.active_pageant
+      = @user.active_pageant.client
+      = @user.active_pageant.location
     - if @user.pageants.count > 0
       - @user.pageants.each do |pageant|
         = pageant.name
