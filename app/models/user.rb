@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :pageants
-  has_one :active_pageant, class_name: Pageant
+  has_one :active_pageant, -> { where status: "active" }, class_name: "Pageant"
 
   validates :email, presence: true
   validates :password, presence: true

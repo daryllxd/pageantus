@@ -11,6 +11,13 @@ FactoryGirl.define do
         create_list :pageant, 2, user: instance
       end
     end
+
+    trait :with_active_pageant do
+      after(:create) do |instance|
+        create(:pageant, :active, user: instance)
+      end
+    end
+
   end
 
   factory :pageant do
@@ -19,6 +26,9 @@ FactoryGirl.define do
     location "#{Faker::Name.name} City"
     name "#{Faker::Company.name} Pageant"
 
+    trait :active do
+      status 'active'
+    end
 
     trait :with_candidates do
       after(:create) do |instance|

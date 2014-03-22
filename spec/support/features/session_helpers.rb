@@ -16,7 +16,7 @@ module Features
 
 
   def sign_in_as_user_with_active_pageant
-    @user = create(:user, :with_pageants)
+    @user = create(:user, :with_active_pageant)
     sign_in_with(@user.email, @user.password)
   end
 
