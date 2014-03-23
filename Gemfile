@@ -40,12 +40,10 @@ end
 group :development, :test do
   gem 'childprocess'
   gem 'factory_girl_rails', require: false
-  gem 'guard-spork'
   gem 'pry'
   gem 'pry-rails'
   gem 'rails-erd'
   gem 'rspec-rails'
-  gem 'spork-rails'
 end
 
 group :test do

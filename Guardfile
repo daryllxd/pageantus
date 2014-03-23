@@ -30,18 +30,6 @@ guard :rspec, cli: '--drb', all_after_pass: true  do
 
 end
 
-guard 'spork', rspec_env: { 'RAILS_ENV' => 'test' } do
-  watch('config/application.rb')
-  watch('config/environment.rb')
-  watch('config/environments/test.rb')
-  watch(%r{^config/initializers/.+\.rb$})
-  watch('spec/factories.rb') { :rspec }
-  watch('Gemfile.lock')
-  watch('spec/spec_helper.rb')
-  watch('spec/spec_helper.rb') { :rspec }
-  watch(%r{support/}) { :rspec }  
-end
-
 guard 'shell' do
   watch('db/schema.rb') { `annotate --position after` }
 end
