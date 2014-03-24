@@ -1,5 +1,5 @@
 Pageantus::Application.configure do
-  
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -22,4 +22,15 @@ Pageantus::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  silence_warnings do
+    begin
+      require 'pry'
+      IRB = Pry
+      module Pry::RailsCommands ;end
+      IRB::ExtendCommandBundle = Pry::RailsCommands
+    rescue LoadError
+    end
+  end
+
 end
