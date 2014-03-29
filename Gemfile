@@ -31,9 +31,6 @@ group :development do
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'rb-fchange', require: false
-  gem 'rb-fsevent', require: false
-  gem 'rb-inotify', require: false
   gem 'wirb'
 end
 
@@ -43,7 +40,11 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'rails-erd'
+  gem 'rb-fchange', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-inotify', require: false
   gem 'rspec-rails'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
