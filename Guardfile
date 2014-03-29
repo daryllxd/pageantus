@@ -9,7 +9,7 @@ guard :rails, port: 5000 do
   watch(%r{^(config|lib)/.*})
 end
 
-guard :rspec, cli: '--drb', all_after_pass: true  do
+guard :rspec, cmd: 'spring rspec -f doc', all_after_pass: true  do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
