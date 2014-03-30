@@ -3,10 +3,10 @@
   %p.lead Pageantus allows you to create a pageant and ask judges to connect to it.
   %p.lead= @user.email
 
-.row
+.main-application
   .col-md-3
-    %ul
-      %li Home
+    %ul.current-actions
+      %li.active= link_to 'Home', root_path
       %li= link_to 'Create Pageant', new_pageant_path
   .col-md-9
     - if @user.active_pageant
