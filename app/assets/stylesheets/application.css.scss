@@ -2,30 +2,7 @@
 @import "neat";
 @import "partials/resets";
 @import "bootstrap";
-
-.header{
-  @extend .navbar;
-  @extend .navbar-inverse;
-  @extend .navbar-default;
-}
-
-.header-logo{
-  @extend .navbar-header;
-  @include pad( $navbar-padding-vertical/2 $navbar-padding-horizontal );
-}
-
-.header-links{
-  @extend .nav;
-  @extend .navbar-nav;
-  @include pad( $navbar-padding-vertical/2 $navbar-padding-horizontal );
-}
-
-.header-sign-in-form{
-  @extend .nav;
-  @extend .navbar-nav;
-  @extend .navbar-right;
-  @include pad( $navbar-padding-vertical $navbar-padding-horizontal );
-}
+@import "header";
 
 input[type="submit"]{
   @extend .btn;
@@ -40,6 +17,3 @@ input[type="submit"]{
   @extend .col-md-6;
 }
 
-.create-book{
-  @extend .well;
-}
