@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'User signs up' do
   scenario 'Is able to Sign Up' do
 
-    @user = FactoryGirl.create(:user)
+    @user = build(:user)
     visit root_path
     within(:css, '.sign-up') do
       fill_in 'Email', with: @user.email
