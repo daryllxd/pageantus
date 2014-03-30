@@ -8,7 +8,14 @@ describe Pageant do
   it { should validate_presence_of(:client) }
   it { should validate_presence_of(:location) }
 
-  it 'should set default values' do
+  describe 'aasm' do
+    it 'should have default value of inactive' do
+      pageant = build(:pageant)
+      pageant.current_state.should == :inactive
+    end
+  end
+
+  it 'should have inactive status by default when saving to database' do
     pageant = create(:pageant)
     pageant.status.should == 'inactive'
   end

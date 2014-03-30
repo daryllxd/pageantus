@@ -15,15 +15,19 @@ class Pageant < ActiveRecord::Base
     state :finished
   end
 
+  def current_state
+    self.aasm.current_state
+  end
+
 end
 
 class NullPageant < RuntimeError
-    def location
-    end
-
-    def client
-    end
+  def location
   end
+
+  def client
+  end
+end
 
 # == Schema Information
 #
