@@ -24,6 +24,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'
+  gem 'guard-livereload'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-shell'
