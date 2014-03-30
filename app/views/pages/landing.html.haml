@@ -3,18 +3,17 @@
     .well
       %h1 Pageantus: Pageant Management System
       %p.lead Wow
-  .col-md-6
-    .well
-      %h2 Sign up
-      = form_for :user do |f|
-        .form-group
-          = f.label :email
-          = f.text_field :email, class: "form-control"
-        .form-group
-          = f.label :password
-          = f.password_field :password, class: "form-control"
-        .form-group
-          = f.submit class: "btn-primary"
+  .sign-up
+    %h2 Sign up
+    = form_for :user do |f|
+      .form-group
+        = f.label :email
+        = f.text_field :email, class: "form-control"
+      .form-group
+        = f.label :password
+        = f.password_field :password, class: "form-control"
+      .form-group
+        = f.submit 'Sign Up', class: "btn-primary"
 .row
   - 3.times do
     .col-md-4

@@ -32,6 +32,11 @@ input[type="submit"]{
   @extend .btn-primary;
 }
 
+.sign-up{
+  @extend .col-md-6;
+}
+
+
 .create-book{
   @extend .well;
 }

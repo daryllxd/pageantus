@@ -17,6 +17,14 @@ class Pageant < ActiveRecord::Base
 
 end
 
+class NullPageant < RuntimeError
+    def location
+    end
+
+    def client
+    end
+  end
+
 # == Schema Information
 #
 # Table name: pageants
