@@ -4,10 +4,7 @@
   %p.lead= @user.email
 
 .main-application
-  .col-md-3
-    %ul.current-actions
-      %li.active= link_to 'Home', root_path
-      %li= link_to 'Create Pageant', new_pageant_path
+  = render  'partials/sidebar'
   .col-md-9
     - if @user.active_pageant
       = @user.active_pageant.client

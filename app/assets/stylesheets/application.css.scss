@@ -30,3 +30,7 @@ input[type="submit"]{
   @extend .nav-stacked;
   @extend .nav-pills;
 }
+
+.sidebar {
+  @extend .col-md-3;
+}
