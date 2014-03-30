@@ -14,6 +14,7 @@
 /.bundle
 /vendor/bundle/
 /vendor/ruby/
+/vendor/rails/
 
 # minimal Rails specific artifacts
 .gemrc

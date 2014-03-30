@@ -7,11 +7,10 @@
 = render 'active_pageant'
 
 - if @user.pageants.count > 0
-  - @user.pageants.each do |pageant|
-    .well{id: pageant.id}
-      %p= "Name: #{pageant.name}"
-      %p= "Client: #{pageant.client}"
-      %p= "Location: #{pageant.location}"
+  = content_tag_for :div, @user.pageants do |pageant|
+    %p= "Name: #{pageant.name}"
+    %p= "Client: #{pageant.client}"
+    %p= "Location: #{pageant.location}"
 - else
   = link_to 'No pageants. Add your first!', new_pageant_path
 
