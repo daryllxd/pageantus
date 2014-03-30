@@ -38,7 +38,7 @@ end
 group :development, :test do
   gem 'childprocess'
   gem 'factory_girl_rails', require: false
-  gem 'pry'
+  gem 'pry', '~> 0.9.12.6'
   gem 'pry-rails'
   gem 'rails-erd'
   gem 'rb-fchange', require: false
