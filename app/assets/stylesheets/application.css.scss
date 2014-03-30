@@ -28,6 +28,14 @@ input[type="submit"]{
   @extend .nav, .nav-stacked, .nav-pills;
 }
 
+.main {
+  @extend .container;
+}
+
+.body {
+  @extend .col-md-9;
+}
+
 .sidebar {
   @extend .col-md-3;
 }

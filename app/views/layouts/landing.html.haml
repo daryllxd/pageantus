@@ -8,9 +8,6 @@
     .page
       %main{:role => "main"}
         = render 'partials/messages'
-        .main
-          = yield(:welcome) if content_for?(:welcome) 
-          = render  'partials/sidebar'
-          .body
-            = yield
+        .container
+          = yield
       = render 'partials/footer'
