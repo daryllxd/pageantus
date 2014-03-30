@@ -32,10 +32,13 @@ input[type="submit"]{
   @extend .btn-primary;
 }
 
+.alert {
+  @extend .container;
+}
+
 .sign-up{
   @extend .col-md-6;
 }
-
 
 .create-book{
   @extend .well;
