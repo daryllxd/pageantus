@@ -5,8 +5,7 @@
 @import "header";
 
 input[type="submit"]{
-  @extend .btn;
-  @extend .btn-primary;
+  @extend .btn, .btn-primary;
 }
 
 .alert {
@@ -26,9 +25,7 @@ input[type="submit"]{
 }
 
 .current-actions {
-  @extend .nav;
-  @extend .nav-stacked;
-  @extend .nav-pills;
+  @extend .nav, .nav-stacked, .nav-pills;
 }
 
 .sidebar {
