@@ -11,7 +11,7 @@
     %p= "Name: #{pageant.name}"
     %p= "Client: #{pageant.client}"
     %p= "Location: #{pageant.location}"
-    %p= link_to 'Activate', pageant_activation_path
+    %p= link_to 'Activate', pageant_activation_path(pageant_id: pageant)
 - else
   = link_to 'No pageants. Add your first!', new_pageant_path
 

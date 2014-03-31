@@ -13,6 +13,11 @@ class PageantsController < ApplicationController
     end
   end
 
+  def activate
+    PageantActivation.activate(Pageant.where(params[:pageant_id]))
+    render text: "#{params[:pageant_id]} is now starting!"
+  end
+
   def new
   end
 
